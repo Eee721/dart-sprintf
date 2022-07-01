@@ -74,6 +74,9 @@ class PrintFormat {
 
       // grab the argument we'll be dealing with
       if (_arg == null && _type != '%') {
+        if(arg_offset>=args.length){
+          break;
+        }        
         _arg = args[arg_offset++];
       }
 
